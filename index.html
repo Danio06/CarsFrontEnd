@@ -556,7 +556,7 @@
           <div class="logo-circle">
             <div></div><div></div><div></div><div></div>
           </div>
-          <span class="brand-name">Car Data API</span>
+          <span class="brand-name">Cars Data API</span>
         </div>
         <h1>Engine<span>Database</span></h1>
         <div class="header-sub"> · Engines · Transmissions · Specs · </div>
@@ -586,8 +586,6 @@
       <button class="chip" onclick="setQuery('G20')">G20</button>
       <button class="chip" onclick="setQuery('E90 petrol')">E90 petrol</button>
       <button class="chip" onclick="setQuery('G20 best diesel')">G20 best diesel</button>
-      <button class="chip" onclick="setQuery('E90 best')">E90 best</button>
-      <button class="chip" onclick="setQuery('330i')">330i</button>
     </div>
   </section>
 
@@ -714,8 +712,7 @@
   
     document.getElementById('results').innerHTML = html;
   }
-  
-  // GŁÓWNA FUNKCJA
+
   async function runQuery() {
     const query = document.getElementById('query').value.trim();
     if (!query) return;
@@ -750,8 +747,6 @@
       `);
     }
   }
-  
-  // Enter key
   document.getElementById('query').addEventListener('keydown', e => {
     if (e.key === 'Enter') runQuery();
   });
